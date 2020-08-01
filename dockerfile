@@ -1,7 +1,6 @@
-FROM php:7.4-cli
+FROM httpd:2.4
 
-COPY . /usr/src/myapp
-
-WORKDIR /usr/src/myapp
-
-CMD [ "php", "./index.php" ]
+COPY index.html /usr/local/apache2/htdocs/
+COPY contato.html /usr/local/apache2/htdocs/
+COPY css /usr/local/apache2/htdocs/
+COPY js /usr/local/apache2/htdocs/
